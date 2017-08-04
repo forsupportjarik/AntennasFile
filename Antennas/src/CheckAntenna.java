@@ -193,4 +193,10 @@ public class CheckAntenna {
 
         return result;
     }
+
+    public static String checkAntennaId(String nameForDefiningAntenna) {
+
+
+        return null;
+    }
 }

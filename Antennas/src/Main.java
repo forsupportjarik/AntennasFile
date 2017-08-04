@@ -22,7 +22,7 @@ public class Main {
 
         antennasData.writeDataToFile(antennasData.createFile(fileNameAntennas));
 
-        siteFileData.writeDataToXeusFile(siteFileData.createFileForXeus(fileNameXeus));
+       // siteFileData.writeDataToXeusFile(siteFileData.createFileForXeus(fileNameXeus));
 
 
         coordinatesFileGsm.writeDataToCoordinatesFile(antennasData.createFile(fileNameCoordinatesGsm));
