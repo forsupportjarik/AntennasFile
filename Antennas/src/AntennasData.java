@@ -6,24 +6,6 @@ import java.sql.*;
 public class AntennasData {
 
 
-    public static File createFile(String fileName) {
-        File file = null;
-        try {
-            file = new File("C:\\DATA\\Mentor projects\\" + fileName);
-            boolean fvar = file.createNewFile();
-            if (fvar) {
-                System.out.println("File has been created successfully");
-            } else {
-                System.out.println("File already present at the specified location");
-            }
-        } catch (IOException e) {
-            System.out.println("Exception Occurred:");
-            e.printStackTrace();
-        }
-        return file;
-    }
-
-
     public static void writeDataToFile(File file) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException {
 
         Class.forName("com.mysql.jdbc.Driver");

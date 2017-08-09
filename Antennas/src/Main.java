@@ -24,6 +24,6 @@ public class Main {
 
         coordinatesFileGsm.writeDataToCoordinatesFile(antennasData.createFile(fileNameCoordinatesGsm));
 
-        siteFileData.writeDataToXeusFile(siteFileData.createFileForXeus(fileNameXeus));
+        siteFileData.writeDataToXeusFile(Utilities.createFileForXeus(fileNameXeus));
     }
 }

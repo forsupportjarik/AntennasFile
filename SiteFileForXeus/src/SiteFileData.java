@@ -6,11 +6,7 @@ import java.sql.*;
 
 public class SiteFileData {
 
-    public static File createFileForXeus(String fileName) {
 
-        return AntennasData.createFile(fileName);
-
-    }
 
     public static void writeDataToXeusFile(File file) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException {
 
