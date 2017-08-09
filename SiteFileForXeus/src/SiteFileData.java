@@ -35,7 +35,7 @@ public class SiteFileData {
             fw.append(rs.getString(5) + "\t");
             fw.append("255" + "\t");
             fw.append("1" + "\t");
-            fw.append(rs.getString(7).substring(rs.getString(7).indexOf("="), rs.getString(7).length())  + "\t");
+            fw.append(Utilities.getLacFromRefULocationAreaZte(rs.getString(7) + "\t"));
             fw.append("\t");
             fw.append(rs.getString(6) + "\t");
             fw.append("\t");
