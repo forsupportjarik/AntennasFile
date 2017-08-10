@@ -14,15 +14,15 @@ public class Main {
         PerformingProcedures performingProcedures = new PerformingProcedures();
         CoordinatesFileGsm coordinatesFileGsm = new CoordinatesFileGsm();
 
-        updateRpdbData.exportDataFromRpdb(antennasData.createFile(fileNameExportRpdb));
+        updateRpdbData.exportDataFromRpdb(Utilities.createFile(fileNameExportRpdb));
         updateRpdbData.importDataFromRpdb();
 
         performingProcedures.callProcedure1();
         performingProcedures.callProcedure2();
 
-        antennasData.writeDataToFile(antennasData.createFile(fileNameAntennas));
+        antennasData.writeDataToFile(Utilities.createFile(fileNameAntennas));
 
-        coordinatesFileGsm.writeDataToCoordinatesFile(antennasData.createFile(fileNameCoordinatesGsm));
+        coordinatesFileGsm.writeDataToCoordinatesFile(Utilities.createFile(fileNameCoordinatesGsm));
 
         siteFileData.writeDataToXeusFile(Utilities.createFileForXeus(fileNameXeus));
     }
