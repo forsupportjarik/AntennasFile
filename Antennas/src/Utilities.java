@@ -3,16 +3,16 @@ import java.io.IOException;
 
 public class Utilities {
 
-    public static File createFileForXeus(String fileName) {
+    public static File createFileForXeus(String path) {
 
-        return createFile(fileName);
+        return createFile(path);
 
     }
 
-    public static File createFile(String fileName) {
+    public static File createFile(String path) {
         File file = null;
         try {
-            file = new File("C:\\DATA\\Mentor projects\\" + fileName);
+            file = new File(path);
             boolean fvar = file.createNewFile();
             if (fvar) {
                 System.out.println("File has been created successfully");
