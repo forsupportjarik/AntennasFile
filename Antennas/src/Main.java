@@ -8,10 +8,10 @@ public class Main {
         String fileNameXeus = "SiteFileForXeus.xif";
         String fileNameExportRpdb = "ExportFromRpdb.csv";
         String fileNameCoordinatesGsm = "Coordinates.txt";
-        String pathForAntennas = "C:\\DATA\\Mentor projects\\" + fileNameAntennas;
+        String pathForAntennas = "E:\\PhysicalData_UMTS\\" + fileNameAntennas;
         String pathForXeus = "//172.20.237.243//optimization//" + fileNameXeus;
-        String pathForGsm = "C:\\DATA\\Mentor projects\\" + fileNameCoordinatesGsm;
-        String pathToFileNameExportRpdb = "C:\\DATA\\Mentor projects\\" + fileNameExportRpdb;
+        String pathForGsm = "E:\\PhysicalData_GSM\\" + fileNameCoordinatesGsm;
+        String pathToFileNameExportRpdb = "E:\\Teoco_supp\\" + fileNameExportRpdb;
 
         AntennasData antennasData = new AntennasData();
         SiteFileData siteFileData = new SiteFileData();
