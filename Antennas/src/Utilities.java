@@ -28,9 +28,16 @@ public class Utilities {
 
     public static String getLacFromRefULocationAreaZte(String lacFromDb) {
 
-        String s = lacFromDb.substring(lacFromDb.lastIndexOf("=") + 1);
+        String lac = lacFromDb.substring(lacFromDb.lastIndexOf("=") + 1);
 
 
-        return s;
+        return lac;
+    }
+
+    public static String defineAntennaIdForAntennasFile(String cellNameOss) {
+
+        String antennaId;
+
+        return antennaId;
     }
 }
