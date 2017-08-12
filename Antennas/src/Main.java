@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException, IOException {
 
         String fileNameAntennas = "Antennas.txt";
-        String fileNameXeus = "SiteFileForXeus.xif";
+        String fileNameXeus = "SiteFileForXeusZTE.xif";
         String fileNameExportRpdb = "ExportFromRpdb.csv";
         String fileNameCoordinatesGsm = "Coordinates.txt";
         String pathForAntennas = "C:\\DATA\\PROGRAMMING\\filesToHide" + fileNameAntennas;
