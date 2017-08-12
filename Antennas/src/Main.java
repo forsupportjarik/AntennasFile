@@ -14,7 +14,7 @@ public class Main {
         String pathToFileNameExportRpdb = "C:\\DATA\\PROGRAMMING\\filesToHide" + fileNameExportRpdb;
 
         AntennasData antennasData = new AntennasData();
-        SiteFileData siteFileData = new SiteFileData();
+        SiteFileDataZte siteFileData = new SiteFileDataZte();
         UpdateRpdbData updateRpdbData = new UpdateRpdbData();
         PerformingProcedures performingProcedures = new PerformingProcedures();
         CoordinatesFileGsm coordinatesFileGsm = new CoordinatesFileGsm();

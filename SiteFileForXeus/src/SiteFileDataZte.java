@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.sql.*;
 
 
-public class SiteFileData {
+public class SiteFileDataZte {
 
 
 
