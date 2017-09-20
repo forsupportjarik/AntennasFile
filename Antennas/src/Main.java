@@ -6,7 +6,7 @@ public class Main {
 
         String fileNameAntennas = "Antennas.txt";
         String fileNameXeusZte = "SiteFileForXeusZTE.xif";
-        String fileNameXeusNokia = "SiteFileForXeusZTE.xif";
+        String fileNameXeusNokia = "SiteFileForXeusNokia.xif";
         String fileNameExportRpdb = "ExportFromRpdb.csv";
         String fileNameCoordinatesGsm = "Coordinates.txt";
         String pathForAntennas = "C:\\DATA\\PROGRAMMING\\filesToHide\\" + fileNameAntennas;
