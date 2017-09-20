@@ -28,7 +28,7 @@ public class AntennasData {
                     fw.append(rs.getString(6) + "\t") + "",
                     fw.append("true" + "\t") + "",
                     fw.append("5" + "\t") + "",
-                    fw.append(Utilities.defineAntennaIdForAntennasFile(rs.getString(6), rs.getString(14)) + "\t") + "",
+                    fw.append(Utilities.defineAntennaIdForAntennasFile(rs.getString(3), rs.getString(14)) + "\t") + "",
                     fw.append(CheckAntenna.checkAntennaName(rs.getString(7)) + "\t") + "",
                     fw.append("\t") + "",
                     fw.append(rs.getString(4) + "\t") + "",

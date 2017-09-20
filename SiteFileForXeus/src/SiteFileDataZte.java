@@ -344,6 +344,6 @@ public class SiteFileDataZte {
         fw.flush();
         fw.close();
 
-        System.out.println("SiteFileForXeus.xif file is done.");
+        System.out.println("SiteFileForXeusZTE.xif file is done.");
     }
 }

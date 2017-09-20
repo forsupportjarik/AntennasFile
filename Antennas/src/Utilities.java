@@ -34,9 +34,9 @@ public class Utilities {
         return lac;
     }
 
-    public static String defineAntennaIdForAntennasFile(String cellNameOss, String cellId) {
+    public static String defineAntennaIdForAntennasFile(String nodeBNameOss, String cellId) {
 
-        String antennaId = cellNameOss;
+        String antennaId = nodeBNameOss;
         String cI = cellId;
 
         if (cI.endsWith("1") || cI.endsWith("4") || cI.endsWith("7")) {
@@ -45,7 +45,9 @@ public class Utilities {
             return antennaId.concat("/2");
         } else if (cI.endsWith("3") || cI.endsWith("6") || cI.endsWith("9")) {
             return antennaId.concat("/3");
-        } else return cellNameOss.concat("/1");
+        } else if (cI.equals(null)) {
+            return nodeBNameOss.concat("/1");
+        } else return nodeBNameOss.concat("/1");
 
 
     }
