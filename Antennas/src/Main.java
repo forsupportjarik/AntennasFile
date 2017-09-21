@@ -9,11 +9,11 @@ public class Main {
         String fileNameXeusNokia = "SiteFileForXeusNokia.xif";
         String fileNameExportRpdb = "ExportFromRpdb.csv";
         String fileNameCoordinatesGsm = "Coordinates.txt";
-        String pathForAntennas = "C:\\DATA\\PROGRAMMING\\filesToHide\\" + fileNameAntennas;
-        String pathForXeusZte = "C:\\DATA\\PROGRAMMING\\filesToHide\\" + fileNameXeusZte;
-        String pathForXeusNokia = "C:\\DATA\\PROGRAMMING\\filesToHide\\" + fileNameXeusNokia;
-        String pathForGsm = "C:\\DATA\\PROGRAMMING\\filesToHide\\" + fileNameCoordinatesGsm;
-        String pathToFileNameExportRpdb = "C:\\DATA\\PROGRAMMING\\filesToHide\\" + fileNameExportRpdb;
+        String pathForAntennas = "E:\\PhysicalData_UMTS\\" + fileNameAntennas;
+        String pathForXeusZte = "//172.20.237.243//optimization//" + fileNameXeusZte;
+        String pathForXeusNokia = "//172.20.237.243//optimization//" + fileNameXeusNokia;
+        String pathForGsm = "E:\\PhysicalData_GSM\\" + fileNameCoordinatesGsm;
+        String pathToFileNameExportRpdb = "E:\\Teoco_supp\\" + fileNameExportRpdb;
 
         AntennasData antennasData = new AntennasData();
         SiteFileDataZte siteFileDataZte = new SiteFileDataZte();
