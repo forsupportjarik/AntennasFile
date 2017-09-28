@@ -18,8 +18,8 @@ public static void writeDataToCoordinatesFile (File file)throws IOException, Cla
 
     while (rs.next()) {
         fw.append(rs.getString(6)+ "\t");
-        fw.append(rs.getString(4)+ "\t");
         fw.append(rs.getString(5)+ "\t");
+        fw.append(rs.getString(4)+ "\t");
         fw.append(rs.getString(10)+ "\t");
         fw.append(rs.getString(13)+ "\t");
         fw.append(rs.getString(14)+ "\t");
