@@ -39,14 +39,14 @@ public class Utilities {
         String antennaId = nodeBNameOss;
         String cI = cellId;
 
-        if (cI.endsWith("1") || cI.endsWith("4") || cI.endsWith("7")) {
+        if (cI.endsWith("1") || cI.endsWith("4") || cI.endsWith("7") || cI.substring(1, 3).equals(antennaId.substring(1, 3)))  {
             return antennaId.concat("/1");
         } else if (cI.endsWith("2") || cI.endsWith("5") || cI.endsWith("8")) {
             return antennaId.concat("/2");
         } else if (cI.endsWith("3") || cI.endsWith("6") || cI.endsWith("9")) {
             return antennaId.concat("/3");
-        } else if (cI.equals(null)) {
-            return nodeBNameOss.concat("/1");
+        } else if (cI.endsWith("1") || cI.endsWith("4") || cI.endsWith("7") || !cI.substring(1, 3).equals(antennaId.substring(1, 3))) {
+            return antennaId.concat("/4");
         } else return nodeBNameOss.concat("/1");
 
 
