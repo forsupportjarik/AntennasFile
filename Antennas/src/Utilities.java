@@ -56,7 +56,7 @@ public class Utilities {
             return antennaId.concat("/2");
         } else if (cI.endsWith("3") || cI.endsWith("6") || cI.endsWith("9")) {
             return antennaId.concat("/3");
-        } else return nodeBNameOss.concat("/N/A");
+        } else return antennaId.concat("/N/A");
 
 
     }
