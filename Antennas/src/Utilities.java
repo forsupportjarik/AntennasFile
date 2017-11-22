@@ -61,4 +61,13 @@ public class Utilities {
 
     }
 
+    public static String defineIntegralManufacturer(String antennaName) {
+
+        if (antennaName.contains("INT")) {
+            return "BE AWARE FOR CALCULATION WITH INTEGRAL ANTENNA";
+        } else
+
+            return "";
+    }
+
 }
