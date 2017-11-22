@@ -65,7 +65,7 @@ public class Utilities {
 
         String name = antennaName;
         String result = "BE AWARE FOR CALCULATION WITH INTEGRAL ANTENNA";
-        if (name.contains("INT")) {
+        if (name.startsWith("INT")) {
             return result;
         } else
 
