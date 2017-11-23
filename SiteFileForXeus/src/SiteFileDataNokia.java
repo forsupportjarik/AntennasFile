@@ -12,7 +12,7 @@ public class SiteFileDataNokia {
                 "jdbc:mysql://172.20.237.235:3306/All_DB",
                 "ykovalenko", "yaroslav");
         Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT mentor.BSC_RNC_OSS, mentor.NodeB_name, nsn_rnc_WCEL.name, mentor.Lontitude, mentor.Latitude, mentor.Azimuth,\n" +
+        ResultSet rs = stmt.executeQuery("SELECT mentor.BSC_RNC_OSS, mentor.NodeB_name, nsn_UMTS_WCEL.name, mentor.Lontitude, mentor.Latitude, mentor.Azimuth,\n" +
                 "nsn_UMTS_WCEL.LAC, nsn_UMTS_WCEL.CId, nsn_UMTS_WCEL.UARFCN,\n" +
                 "nsn_UMTS_WCEL.PriScrCode, nsn_UMTS_WCEL.PtxPrimaryCPICH\n" +
                 "FROM mentor, nsn_UMTS_WCEL WHERE CONCAT(mentor.LAC_RPDB,mentor.CellID_RPDB) = CONCAT(nsn_UMTS_WCEL.LAC, nsn_UMTS_WCEL.CId)");
