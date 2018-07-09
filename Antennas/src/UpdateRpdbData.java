@@ -56,7 +56,7 @@ public class UpdateRpdbData {
         Statement stmt = conn.createStatement();
         stmt.executeUpdate("DELETE FROM allCellMentor");
         System.out.println("Data from allCellMentor is deleted");
-        String path = "'E:/Teoco_supp/ExportFromRpdb.csv'";
+        String path = "'C:/DATA/HLAM/ExportFromRpdb.csv'";
         stmt.executeUpdate("load data local infile " + path + " into TABLE allCellMentor fields terminated by ','");
 
         System.out.println("Data from ExportFromRpdb.csv is wrote to allCellMentor");

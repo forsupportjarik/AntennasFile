@@ -72,4 +72,16 @@ public class Utilities {
             return "";
     }
 
+    public static String fixAzimuthForLte(String azimuth) {
+
+        String a = azimuth;
+
+        if(a.startsWith("00")) {
+            return a.substring(2);
+        } else if (a.startsWith("0")) {
+            return a.substring(1);
+        }
+        else return a;
+    }
+
 }

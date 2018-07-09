@@ -9,11 +9,11 @@ public class Main {
         String fileNameXeusNokia = "SiteFileForXeusNokia.xif";
         String fileNameExportRpdb = "ExportFromRpdb.csv";
         String fileNameCoordinatesGsm = "Coordinates.txt";
-        String pathForAntennas = "E:\\PhysicalData_UMTS\\" + fileNameAntennas;
-        String pathForXeusZte = "//172.20.237.243//optimization//" + fileNameXeusZte;
-        String pathForXeusNokia = "//172.20.237.243//optimization//" + fileNameXeusNokia;
-        String pathForGsm = "E:\\PhysicalData_GSM\\" + fileNameCoordinatesGsm;
-        String pathToFileNameExportRpdb = "E:\\Teoco_supp\\" + fileNameExportRpdb;
+        String pathForAntennas = "C:\\DATA\\HLAM\\" + fileNameAntennas;
+        String pathForXeusZte = "C:\\DATA\\HLAM\\" + fileNameXeusZte;
+        String pathForXeusNokia = "C:\\DATA\\HLAM\\" + fileNameXeusNokia;
+        String pathForGsm = "C:\\DATA\\HLAM\\" + fileNameCoordinatesGsm;
+        String pathToFileNameExportRpdb = "C:\\DATA\\HLAM\\" + fileNameExportRpdb;
 
         AntennasData antennasData = new AntennasData();
         SiteFileDataZte siteFileDataZte = new SiteFileDataZte();
@@ -29,6 +29,7 @@ public class Main {
         performingProcedures.callProcedure2();
 
         antennasData.writeDataToFile(Utilities.createFile(pathForAntennas));
+        antennasData.writeDataToFileLteData(pathForAntennas);
 
         coordinatesFileGsm.writeDataToCoordinatesFile(Utilities.createFile(pathForGsm));
 
