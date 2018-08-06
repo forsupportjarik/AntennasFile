@@ -29,7 +29,8 @@ public class Main {
         performingProcedures.callProcedure2();
 
         antennasData.writeDataToFile(Utilities.createFile(pathForAntennas));
-        antennasData.writeDataToFileLteData(pathForAntennas);
+        antennasData.writeDataToFileLteDataNsn(pathForAntennas);
+        antennasData.writeDataToFileLteDataHuawei(pathForAntennas);
 
         coordinatesFileGsm.writeDataToCoordinatesFile(Utilities.createFile(pathForGsm));
 

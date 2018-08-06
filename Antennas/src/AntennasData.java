@@ -50,7 +50,7 @@ public class AntennasData {
         System.out.println("Antenna.txt file is done.");
     }
 
-    public static void writeDataToFileLteData(String pathToAntennaFile) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException {
+    public static void writeDataToFileLteDataNsn(String pathToAntennaFile) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException {
 
         Class.forName("com.mysql.jdbc.Driver");
         Connection conn = DriverManager.getConnection(
@@ -108,9 +108,68 @@ public class AntennasData {
         fw.flush();
         fw.close();
 
-        System.out.println("LTE data is added to Antenna.txt file.");
+        System.out.println("LTE Nokia data is added to Antenna.txt file.");
     }
 
+    public static void writeDataToFileLteDataHuawei(String pathToAntennaFile) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException {
+
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://172.20.237.235:3306/All_DB",
+                "ykovalenko", "yaroslav");
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT `a`.`CELLNAME` AS `CELLNAME`,\n" +
+                "       `a`.`CELLID` AS `CELLID`,\n" +
+                "       `d`.`ENODEBFUNCTIONNAME` AS `NODEBNAME`,\n" +
+                "       REPLACE(`b`.`Latitude`,',','.') AS `LAT`,\n" +
+                "       REPLACE(`b`.`Longitude`,',','.') AS `LONG`,\n" +
+                "       '255' AS `MCC`,\n" +
+                "       '01' AS `MNC`,\n" +
+                "       `e`.`TAC` AS `TAC`,\n" +
+                "       `d`.`ENODEBID` AS `ENODEBID`,\n" +
+                "       `c`.`Height` AS `HEIGHT`,\n" +
+                "       IF((SUBSTRING_INDEX(SUBSTRING_INDEX(`a`.`cellName`,'_',-(2)),'_',1) LIKE 'IN%'),'000',SUBSTRING_INDEX(SUBSTRING_INDEX(`a`.`cellName`,'_',-(2)),'_',1)) AS `AZIMUTH`,\n" +
+                "       'LTE' AS `TECH`\n" +
+                " FROM `All_DB`.`Huawei_LTE_CELL_BTS3900` `a`\n" +
+                "       LEFT JOIN `All_DB`.`bd_coord` `b` ON REPLACE(`b`.`Site_Name`,' ','_') = `a`.`NodeB`\n" +
+                "       LEFT JOIN `All_DB`.`LCS_Coordinate_LTE` `c` ON REPLACE(`c`.`Site_Name`,' ','_') = `a`.`NodeB`\n" +
+                "       LEFT JOIN `All_DB`.`huawei_4g_bts3900cnoperatorta` `e` ON REPLACE(`e`.`NodeB`,' ','_') = `a`.`NodeB`\n" +
+                "       LEFT JOIN `All_DB`.`huawei_4g_bts3900enodebfunction` `d` ON REPLACE(`d`.`NodeB`,' ','_') = `a`.`NodeB` GROUP BY `a`.`CELLNAME`");
+
+        FileWriter fw = new FileWriter(pathToAntennaFile,true);
+        while (rs.next()) {
+            Antennas antennas = new Antennas(fw.append("LTE" + "\t") + "",
+                    fw.append(rs.getString(8) + "\t") + "",
+                    fw.append(rs.getString(8) + "\t") + "",
+                    fw.append(rs.getString(3) + "\t") + "",
+                    fw.append(rs.getString(9) + "\t") + "",
+                    fw.append(rs.getString(9) + "\t") + "",
+                    fw.append(rs.getString(5) + "\t") + "",
+                    fw.append(rs.getString(4) + "\t") + "",
+                    fw.append(rs.getString(1) + "\t") + "",
+                    fw.append("true" + "\t") + "",
+                    fw.append("5" + "\t") + "",
+                    fw.append(rs.getString(1) + "/1" + "\t") + "",
+                    fw.append("dummy/dummy" + "\t") + "",
+                    fw.append("\t") + "",
+                    fw.append(rs.getString(5) + "\t") + "",
+                    fw.append(rs.getString(4) + "\t") + "",
+                    fw.append(rs.getString(10) + "\t") + "",
+                    fw.append("0" + "\t") + "",
+                    fw.append(Utilities.fixAzimuthForLte(rs.getString(11) + "\t")) + "",
+                    fw.append("0" + "\t") + "",
+                    fw.append("0" + "\t") + "",
+                    fw.append("0" + "\t") + "",
+                    fw.append("0" + "\t") + "",
+                    fw.append("\t") + "",
+                    fw.append("false" + "\n") + "");
+
+        }
+        fw.flush();
+        fw.close();
+
+        System.out.println("LTE Huawei data is added to Antenna.txt file.");
+    }
 
 }
 
