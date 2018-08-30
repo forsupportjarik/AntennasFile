@@ -24,7 +24,7 @@ public class SiteFileDataHuawei {
             fw.append(rs.getString(2) + "\t");
             fw.append(rs.getString(2) + "\t");
             fw.append(rs.getString(4) + "\t");
-            fw.append(rs.getString(5) + "\t");
+            fw.append(rs.getString(5) + "\t");//
             fw.append("255" + "\t");
             fw.append("1" + "\t");
             fw.append(rs.getString(7) + "\t");
